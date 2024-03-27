@@ -3,8 +3,8 @@ Hi ![](https://user-images.githubusercontent.com/18350557/176309783-0785949b-912
 
 <h3 align="left">A passionate frontend developer from Ukrain</h3>
 
-<a href="http://www.github.com/gleb2130"><img src="https://github-readme-stats.vercel.app/api?username=gleb2130&show_icons=true&hide=&count_private=true&title_color=0891b2&text_color=ffffff&icon_color=0891b2&bg_color=1c1917&hide_border=true&show_icons=true" alt="gleb2130's GitHub stats" /></a>
-<a href="https://github.com/gleb2130" align="left"><img src="https://github-readme-stats.vercel.app/api/top-langs/?username=gleb2130&langs_count=10&title_color=0891b2&text_color=ffffff&icon_color=0891b2&bg_color=1c1917&hide_border=true&locale=en&custom_title=Top%20%Languages" alt="Top Languages" /></a>
+<a href="http://www.github.com/Gleb2130"><img src="https://github-readme-stats.vercel.app/api?username=Gleb2130&show_icons=true&hide=&count_private=true&title_color=0891b2&text_color=ffffff&icon_color=0891b2&bg_color=1c1917&hide_border=true&show_icons=true" alt="Gleb2130's GitHub stats" /></a>
+<a href="https://github.com/Gleb2130" align="left"><img src="https://github-readme-stats.vercel.app/api/top-langs/?username=Gleb2130&langs_count=10&title_color=0891b2&text_color=ffffff&icon_color=0891b2&bg_color=1c1917&hide_border=true&locale=en&custom_title=Top%20%Languages" alt="Top Languages" /></a>
 
 - 🌱 I’m currently learning **TS, C#, R**
 
@@ -24,7 +24,7 @@ Hi ![](https://user-images.githubusercontent.com/18350557/176309783-0785949b-912
 <a href="https://open.spotify.com/playlist/06eT9sKK3mlt1RHPHAhnH9" target="_blank" rel="noreferrer"><img src="https://i.pinimg.com/564x/35/87/f8/3587f8e9df02e2990b93afb9cd6d2323.jpg" width="36" height="36" alt="Spofity" /></a>
 <b>My vibes</b>
 <p align="left">
-  <img src="https://spotify-recently-played-readme.vercel.app/api?user=31fo5v7f7wq4hrxko6yrxnx7mt2e&count=10">
+  <img src="https://spotify-recently-played-readme.vercel.app/api?user=31fo5v7f7wq4hrxko6yrxnx7mt2e&count=6">
 </p>
 
 
