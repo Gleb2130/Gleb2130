@@ -1,6 +1,6 @@
 <div align="center">
 <br/>
-<img src="https://github.com/Gleb2130/12323/blob/main/text_g2.gif" alt="about me">
+<img src="https://github.com/Gleb2130/Gleb2130/blob/main/txt_g.gif" alt="about me">
 <br />
 <div>
 <div align="left">
