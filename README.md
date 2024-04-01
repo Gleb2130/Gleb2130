@@ -30,11 +30,10 @@
   <h3>💻 GitHub Profile Stats</h3>
   
   ![stats](https://github-readme-stats.vercel.app/api?username=Gleb2130&show_icons=true&theme=dark&hide_border=true&bg_color=0d1117)
-  ![Top Langs](https://github-readme-stats.vercel.app/api/top-langs/?username=Gleb2130&theme=dark&layout=compact&show_icons=true&hide_border=true&bg_color=0d1117)
+  ![Top Langs](https://github-readme-stats.vercel.app/api/top-langs/?username=Gleb2130&theme=dark&layout=compact&show_icons=true&hide_border=true&bg_color=0d1117&langs_count=10)
   
   <!--<details> 
   <summary><h2>details...</h2></summary>
-  
   [![Harlok's WakaTime stats](https://github-readme-stats.vercel.app/api/wakatime?username=018e9ae7-d85e-4c87-9dbc-30c063fdde1e&theme=dark&hide_border=true&bg_color=0d1117)](https://github.com/anuraghazra/github-readme-stats)
   
 </details> -->
