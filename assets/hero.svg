@@ -1,75 +1,143 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="340" viewBox="0 0 1200 340" fill="none">
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="360" viewBox="0 0 1200 360" fill="none">
+  <title>Monochrome fourth-dimensional optical illusion</title>
+  <desc>Transparent monochrome abstract projection of a rotating tesseract, with nested impossible geometry, orbital curves and fine particles.</desc>
   <defs>
-    <linearGradient id="bg" x1="0" y1="0" x2="1200" y2="340" gradientUnits="userSpaceOnUse">
-      <stop stop-color="#0D1117"/>
-      <stop offset="1" stop-color="#101923"/>
+    <linearGradient id="silver" x1="230" y1="40" x2="970" y2="320" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#F7F8FA" stop-opacity=".08"/>
+      <stop offset=".32" stop-color="#E6E8EB" stop-opacity=".82"/>
+      <stop offset=".68" stop-color="#AEB4BC" stop-opacity=".42"/>
+      <stop offset="1" stop-color="#FFFFFF" stop-opacity=".08"/>
     </linearGradient>
-    <linearGradient id="accent" x1="0" y1="0" x2="1" y2="1">
-      <stop stop-color="#79FF97"/>
-      <stop offset="1" stop-color="#58A6FF"/>
+    <linearGradient id="bright" x1="350" y1="65" x2="850" y2="295" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#FFFFFF" stop-opacity=".12"/>
+      <stop offset=".5" stop-color="#FFFFFF"/>
+      <stop offset="1" stop-color="#FFFFFF" stop-opacity=".12"/>
     </linearGradient>
-    <radialGradient id="glow" cx="0" cy="0" r="1" gradientTransform="translate(940 160) rotate(90) scale(190 330)" gradientUnits="userSpaceOnUse">
-      <stop stop-color="#1F6FEB" stop-opacity=".19"/>
-      <stop offset="1" stop-color="#1F6FEB" stop-opacity="0"/>
+    <radialGradient id="mist">
+      <stop stop-color="#FFFFFF" stop-opacity=".10"/>
+      <stop offset=".58" stop-color="#FFFFFF" stop-opacity=".025"/>
+      <stop offset="1" stop-color="#FFFFFF" stop-opacity="0"/>
     </radialGradient>
-    <pattern id="grid" width="32" height="32" patternUnits="userSpaceOnUse">
-      <path d="M32 0H0V32" stroke="#8B949E" stroke-opacity=".075" stroke-width="1"/>
-    </pattern>
-    <filter id="soft" x="-50%" y="-50%" width="200%" height="200%">
-      <feGaussianBlur stdDeviation="12"/>
+    <filter id="softGlow" x="-100%" y="-100%" width="300%" height="300%">
+      <feGaussianBlur stdDeviation="5" result="blur"/>
+      <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
     </filter>
+    <filter id="haze" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="18"/>
+    </filter>
+    <pattern id="dots" width="28" height="28" patternUnits="userSpaceOnUse">
+      <circle cx="1" cy="1" r=".65" fill="#FFFFFF" opacity=".12"/>
+    </pattern>
+    <mask id="edgeFade">
+      <linearGradient id="fade" x1="0" y1="0" x2="1" y2="0">
+        <stop stop-color="black"/>
+        <stop offset=".15" stop-color="white"/>
+        <stop offset=".85" stop-color="white"/>
+        <stop offset="1" stop-color="black"/>
+      </linearGradient>
+      <rect width="1200" height="360" fill="url(#fade)"/>
+    </mask>
   </defs>
 
-  <rect width="1200" height="340" rx="18" fill="url(#bg)"/>
-  <rect width="1200" height="340" rx="18" fill="url(#grid)"/>
-  <rect width="1200" height="340" rx="18" fill="url(#glow)"/>
-  <path d="M1 18Q1 1 18 1H1182Q1199 1 1199 18V322Q1199 339 1182 339H18Q1 339 1 322V18Z" stroke="#30363D"/>
+  <!-- Transparent canvas: all atmosphere is made from low-opacity white geometry. -->
+  <ellipse cx="600" cy="180" rx="390" ry="145" fill="url(#mist)"/>
+  <ellipse cx="600" cy="180" rx="230" ry="90" fill="#FFFFFF" opacity=".035" filter="url(#haze)"/>
+  <rect width="1200" height="360" fill="url(#dots)" opacity=".28" mask="url(#edgeFade)"/>
 
-  <!-- Ambient network -->
-  <g stroke="#58A6FF" stroke-opacity=".24" stroke-width="1.2">
-    <path d="M760 68L870 112L1000 72L1090 142L1000 242L850 264L760 190L870 112L850 264"/>
-    <path d="M870 112L940 190L1090 142M940 190L1000 242"/>
-  </g>
-  <g fill="#79FF97">
-    <circle cx="760" cy="68" r="2.4"/><circle cx="1000" cy="72" r="2.4"/>
-    <circle cx="1090" cy="142" r="2.4"/><circle cx="850" cy="264" r="2.4"/>
-  </g>
-  <g fill="#58A6FF">
-    <circle cx="870" cy="112" r="3"/><circle cx="940" cy="190" r="2.6"/><circle cx="1000" cy="242" r="2.6"/>
-  </g>
-  <circle cx="940" cy="190" r="18" fill="#58A6FF" fill-opacity=".12" filter="url(#soft)"/>
-
-  <!-- Moving signal -->
-  <circle r="3.5" fill="#79FF97">
-    <animateMotion dur="8s" repeatCount="indefinite" path="M760 68L870 112L1000 72L1090 142L1000 242L850 264L760 190L870 112"/>
-  </circle>
-  <circle r="2.5" fill="#58A6FF">
-    <animateMotion dur="11s" begin="-4s" repeatCount="indefinite" path="M850 264L940 190L1090 142L1000 72"/>
-  </circle>
-
-  <!-- Main identity -->
-  <g font-family="Segoe UI, Arial, sans-serif">
-    <text x="76" y="91" fill="#79FF97" font-size="13" font-weight="600" letter-spacing="3.2">SOFTWARE DEVELOPER</text>
-    <text x="72" y="158" fill="#F0F6FC" font-size="54" font-weight="700" letter-spacing="-1.5">Gleb Virich</text>
-    <text x="76" y="196" fill="#8B949E" font-size="17">Building things with code.</text>
+  <!-- Distant mathematical field: faint, almost engraved curves. -->
+  <g stroke="#DDE1E6" stroke-width=".8" opacity=".17">
+    <path d="M180 180 C330 8 470 8 600 180 C730 352 870 352 1020 180"/>
+    <path d="M180 180 C330 352 470 352 600 180 C730 8 870 8 1020 180"/>
+    <path d="M260 75 C430 140 770 220 940 285"/>
+    <path d="M260 285 C430 220 770 140 940 75"/>
+    <ellipse cx="600" cy="180" rx="360" ry="118"/>
+    <ellipse cx="600" cy="180" rx="290" ry="76" transform="rotate(-24 600 180)"/>
   </g>
 
-  <!-- Minimal terminal window -->
-  <g transform="translate(76 236)">
-    <rect width="420" height="62" rx="9" fill="#0D1117" fill-opacity=".82" stroke="#30363D"/>
-    <circle cx="18" cy="17" r="3.5" fill="#FF7B72" fill-opacity=".85"/>
-    <circle cx="31" cy="17" r="3.5" fill="#D29922" fill-opacity=".85"/>
-    <circle cx="44" cy="17" r="3.5" fill="#79FF97" fill-opacity=".85"/>
-    <text x="20" y="44" fill="#79FF97" font-family="SFMono-Regular, Consolas, monospace" font-size="13">$</text>
-    <text x="39" y="44" fill="#C9D1D9" font-family="SFMono-Regular, Consolas, monospace" font-size="13">crafting ideas into software</text>
-    <rect x="284" y="33" width="7" height="15" rx="1" fill="#79FF97">
-      <animate attributeName="opacity" values="1;1;0;0;1" keyTimes="0;0.42;0.5;0.92;1" dur="1.15s" repeatCount="indefinite"/>
-    </rect>
+  <!-- The tesseract: two linked cubes, drawn as a 4D projection. -->
+  <g transform="translate(600 180)">
+    <g id="hypercube" stroke-linejoin="round" stroke-linecap="round">
+      <!-- outer projected cube -->
+      <path d="M0 -126 L132 -70 L126 72 L-8 132 L-132 65 L-126 -76 Z"
+            stroke="url(#silver)" stroke-width="1.45" opacity=".86"/>
+      <path d="M0 -126 L-8 132 M132 -70 L-126 -76 M126 72 L-132 65"
+            stroke="#FFFFFF" stroke-width="1" opacity=".38"/>
+      <!-- inner cube, offset in the fourth axis -->
+      <path d="M0 -66 L70 -34 L66 38 L-4 70 L-70 34 L-66 -38 Z"
+            stroke="#FFFFFF" stroke-width="1.6" opacity=".92"/>
+      <path d="M0 -126 L0 -66 M132 -70 L70 -34 M126 72 L66 38 L-8 132 L-4 70 M-132 65 L-70 34 L-126 -76 L-66 -38"
+            stroke="url(#bright)" stroke-width="1.25" opacity=".72"/>
+      <!-- 4D cross-connections -->
+      <path d="M0 -126 L70 -34 M132 -70 L-4 70 M126 72 L-70 34 M-8 132 L-66 -38 M-132 65 L66 38 M-126 -76 L-4 70"
+            stroke="#E9EDF2" stroke-width=".85" opacity=".44"/>
+      <!-- central perspective facets -->
+      <path d="M0 -66 L0 0 L66 38 M0 0 L-66 -38 M0 0 L-4 70 M0 0 L70 -34"
+            stroke="#FFFFFF" stroke-width="1.1" opacity=".68"/>
+      <path d="M-70 34 L0 0 L70 -34 M-66 -38 L0 0 L66 38"
+            stroke="#FFFFFF" stroke-width=".8" opacity=".32"/>
+      <circle cx="0" cy="0" r="2.2" fill="#FFFFFF" filter="url(#softGlow)"/>
+    </g>
+
+    <!-- A second, offset projection creates the impossible dimensional fold. -->
+    <g transform="rotate(18) scale(.72)" opacity=".36" stroke="#FFFFFF" stroke-width=".8">
+      <path d="M0 -126 L132 -70 L126 72 L-8 132 L-132 65 L-126 -76 Z"/>
+      <path d="M0 -126 L-8 132 M132 -70 L-126 -76 M126 72 L-132 65"/>
+      <path d="M0 -66 L70 -34 L66 38 L-4 70 L-70 34 L-66 -38 Z"/>
+      <path d="M0 -126 L70 -34 M132 -70 L-4 70 M126 72 L-70 34 M-8 132 L-66 -38 M-132 65 L66 38 M-126 -76 L-4 70"/>
+    </g>
+
+    <!-- Rotating orbit rings in different planes. -->
+    <g stroke="#F2F4F7" stroke-width=".9" opacity=".38">
+      <ellipse rx="206" ry="66" transform="rotate(28)"/>
+      <ellipse rx="206" ry="66" transform="rotate(-28)"/>
+      <ellipse rx="174" ry="94" transform="rotate(72)"/>
+      <ellipse rx="174" ry="94" transform="rotate(-72)"/>
+    </g>
+    <g stroke="#FFFFFF" stroke-width="1.15" opacity=".68">
+      <path d="M-210 0 C-118 -96 118 -96 210 0" />
+      <path d="M-210 0 C-118 96 118 96 210 0" />
+    </g>
   </g>
 
-  <!-- Small status label -->
-  <g transform="translate(930 292)" font-family="SFMono-Regular, Consolas, monospace" font-size="10">
-    <circle cx="0" cy="-3" r="3" fill="#79FF97"/>
-    <text x="12" y="0" fill="#8B949E" letter-spacing="1.4">SYSTEM ONLINE</text>
+  <!-- Subtle dimensional echo lines, trailing off into the transparent edges. -->
+  <g stroke="#FFFFFF" stroke-width=".8" opacity=".24">
+    <path d="M245 180 C360 112 435 102 493 130"/>
+    <path d="M245 180 C360 248 435 258 493 230"/>
+    <path d="M955 180 C840 112 765 102 707 130"/>
+    <path d="M955 180 C840 248 765 258 707 230"/>
+  </g>
+
+  <!-- Tiny suspended points, kept monochrome. -->
+  <g fill="#FFFFFF">
+    <circle cx="245" cy="180" r="1.5" opacity=".5"/>
+    <circle cx="360" cy="112" r="1.1" opacity=".42"/>
+    <circle cx="360" cy="248" r="1.1" opacity=".42"/>
+    <circle cx="955" cy="180" r="1.5" opacity=".5"/>
+    <circle cx="840" cy="112" r="1.1" opacity=".42"/>
+    <circle cx="840" cy="248" r="1.1" opacity=".42"/>
+    <circle cx="600" cy="27" r="1.3" opacity=".65"/>
+    <circle cx="600" cy="333" r="1.3" opacity=".65"/>
+    <circle cx="430" cy="54" r="1" opacity=".38"/>
+    <circle cx="770" cy="306" r="1" opacity=".38"/>
+  </g>
+
+  <!-- Slow movement: the projected 4D object rotates and breathes, not flashes. -->
+  <g>
+    <animateTransform href="#hypercube" attributeName="transform" type="rotate"
+      values="0;3;0;-3;0" dur="28s" repeatCount="indefinite"/>
+    <ellipse cx="600" cy="180" rx="235" ry="105" stroke="#FFFFFF" stroke-width=".7" opacity=".22">
+      <animate attributeName="rx" values="220;242;220" dur="13s" repeatCount="indefinite"/>
+      <animate attributeName="ry" values="96;112;96" dur="13s" repeatCount="indefinite"/>
+      <animate attributeName="opacity" values=".12;.3;.12" dur="13s" repeatCount="indefinite"/>
+    </ellipse>
+    <circle r="2" fill="#FFFFFF" filter="url(#softGlow)">
+      <animateMotion dur="19s" repeatCount="indefinite"
+        path="M390 180 C470 45 730 45 810 180 C730 315 470 315 390 180"/>
+      <animate attributeName="opacity" values=".18;.85;.18" dur="6s" repeatCount="indefinite"/>
+    </circle>
+    <circle r="1.5" fill="#FFFFFF" opacity=".7">
+      <animateMotion dur="23s" repeatCount="indefinite"
+        path="M600 28 C830 90 830 270 600 332 C370 270 370 90 600 28"/>
+    </circle>
   </g>
 </svg>
