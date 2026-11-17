@@ -1,0 +1,75 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="340" viewBox="0 0 1200 340" fill="none">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1200" y2="340" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#0D1117"/>
+      <stop offset="1" stop-color="#101923"/>
+    </linearGradient>
+    <linearGradient id="accent" x1="0" y1="0" x2="1" y2="1">
+      <stop stop-color="#79FF97"/>
+      <stop offset="1" stop-color="#58A6FF"/>
+    </linearGradient>
+    <radialGradient id="glow" cx="0" cy="0" r="1" gradientTransform="translate(940 160) rotate(90) scale(190 330)" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#1F6FEB" stop-opacity=".19"/>
+      <stop offset="1" stop-color="#1F6FEB" stop-opacity="0"/>
+    </radialGradient>
+    <pattern id="grid" width="32" height="32" patternUnits="userSpaceOnUse">
+      <path d="M32 0H0V32" stroke="#8B949E" stroke-opacity=".075" stroke-width="1"/>
+    </pattern>
+    <filter id="soft" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="12"/>
+    </filter>
+  </defs>
+
+  <rect width="1200" height="340" rx="18" fill="url(#bg)"/>
+  <rect width="1200" height="340" rx="18" fill="url(#grid)"/>
+  <rect width="1200" height="340" rx="18" fill="url(#glow)"/>
+  <path d="M1 18Q1 1 18 1H1182Q1199 1 1199 18V322Q1199 339 1182 339H18Q1 339 1 322V18Z" stroke="#30363D"/>
+
+  <!-- Ambient network -->
+  <g stroke="#58A6FF" stroke-opacity=".24" stroke-width="1.2">
+    <path d="M760 68L870 112L1000 72L1090 142L1000 242L850 264L760 190L870 112L850 264"/>
+    <path d="M870 112L940 190L1090 142M940 190L1000 242"/>
+  </g>
+  <g fill="#79FF97">
+    <circle cx="760" cy="68" r="2.4"/><circle cx="1000" cy="72" r="2.4"/>
+    <circle cx="1090" cy="142" r="2.4"/><circle cx="850" cy="264" r="2.4"/>
+  </g>
+  <g fill="#58A6FF">
+    <circle cx="870" cy="112" r="3"/><circle cx="940" cy="190" r="2.6"/><circle cx="1000" cy="242" r="2.6"/>
+  </g>
+  <circle cx="940" cy="190" r="18" fill="#58A6FF" fill-opacity=".12" filter="url(#soft)"/>
+
+  <!-- Moving signal -->
+  <circle r="3.5" fill="#79FF97">
+    <animateMotion dur="8s" repeatCount="indefinite" path="M760 68L870 112L1000 72L1090 142L1000 242L850 264L760 190L870 112"/>
+  </circle>
+  <circle r="2.5" fill="#58A6FF">
+    <animateMotion dur="11s" begin="-4s" repeatCount="indefinite" path="M850 264L940 190L1090 142L1000 72"/>
+  </circle>
+
+  <!-- Main identity -->
+  <g font-family="Segoe UI, Arial, sans-serif">
+    <text x="76" y="91" fill="#79FF97" font-size="13" font-weight="600" letter-spacing="3.2">SOFTWARE DEVELOPER</text>
+    <text x="72" y="158" fill="#F0F6FC" font-size="54" font-weight="700" letter-spacing="-1.5">Gleb Virich</text>
+    <text x="76" y="196" fill="#8B949E" font-size="17">Building things with code.</text>
+  </g>
+
+  <!-- Minimal terminal window -->
+  <g transform="translate(76 236)">
+    <rect width="420" height="62" rx="9" fill="#0D1117" fill-opacity=".82" stroke="#30363D"/>
+    <circle cx="18" cy="17" r="3.5" fill="#FF7B72" fill-opacity=".85"/>
+    <circle cx="31" cy="17" r="3.5" fill="#D29922" fill-opacity=".85"/>
+    <circle cx="44" cy="17" r="3.5" fill="#79FF97" fill-opacity=".85"/>
+    <text x="20" y="44" fill="#79FF97" font-family="SFMono-Regular, Consolas, monospace" font-size="13">$</text>
+    <text x="39" y="44" fill="#C9D1D9" font-family="SFMono-Regular, Consolas, monospace" font-size="13">crafting ideas into software</text>
+    <rect x="284" y="33" width="7" height="15" rx="1" fill="#79FF97">
+      <animate attributeName="opacity" values="1;1;0;0;1" keyTimes="0;0.42;0.5;0.92;1" dur="1.15s" repeatCount="indefinite"/>
+    </rect>
+  </g>
+
+  <!-- Small status label -->
+  <g transform="translate(930 292)" font-family="SFMono-Regular, Consolas, monospace" font-size="10">
+    <circle cx="0" cy="-3" r="3" fill="#79FF97"/>
+    <text x="12" y="0" fill="#8B949E" letter-spacing="1.4">SYSTEM ONLINE</text>
+  </g>
+</svg>
